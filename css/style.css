@@ -1,0 +1,128 @@
+body {
+    font-family: 'Poppins', serif;
+    background-color: #f1f1f1;
+    background-image: url(../images/concrete_seamless.png);
+}
+
+@keyframes mymove {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+#logo {
+    animation-name: mymove;
+    animation-duration: 5s;
+    /* HOW TO KEEP THE LOGO FROM GOING SUPER BIG AFTER ANIMATION ?????????????????????????? */
+    /* width: 475px; */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* correct tag? */
+nav ul li a:visited {
+    color:blue;
+}
+
+.card > header {
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0px 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 900px) {
+    header, .nav_links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .pricing, .card {
+        flex-basis: 275px;
+    }
+
+    a + header {
+        top: 0px;
+        position: sticky;
+    }
+}
+
+
+@media screen and (prefers-reduced-motion) {
+    #logo {
+        animation: mymove none;
+    } 
+}
+
+@media print {
+    body {
+        font-family: Arial, Helvetica;
+        background-image:none;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        /* width: 100%; */
+
+    }
+
+    .pricing {
+        align-items: flex-end;
+    }
+
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+        /* NOT ON THE SAME LINE ???? */
+    }
+
+    #gallery, .gallery {
+        display:none;
+    }
+}
+
+
