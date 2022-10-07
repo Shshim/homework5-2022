@@ -18,8 +18,6 @@ body {
 #logo {
     animation-name: mymove;
     animation-duration: 5s;
-    /* HOW TO KEEP THE LOGO FROM GOING SUPER BIG AFTER ANIMATION ?????????????????????????? */
-    /* width: 475px; */
 }
 
 header {
@@ -102,26 +100,32 @@ nav ul li a:visited {
         font-family: Arial, Helvetica;
         background-image:none;
     }
+    nav {
+        width: 100%;
+    }
+
     .nav_links {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        /* width: 100%; */
-
+        justify-content: space-around;
     }
 
     .pricing {
         align-items: flex-end;
+        flex-wrap:nowrap;
     }
 
     .card {
         border: 2px solid #45ADDD;
         flex-basis: 325px;
-        /* NOT ON THE SAME LINE ???? */
     }
 
     #gallery, .gallery {
         display:none;
+    }
+    
+    .card li:nth-child(2)::after {
+        content:"\01F44D";
     }
 }
 
