@@ -55,6 +55,7 @@ nav ul li a:visited {
 
 .pricing {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
@@ -70,6 +71,7 @@ nav ul li a:visited {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
 }
 
 /* CSS for desktop view */
