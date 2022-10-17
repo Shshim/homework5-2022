@@ -4,6 +4,7 @@ body {
     background-image: url(../images/concrete_seamless.png);
 }
 
+/* Animates the logo */
 @keyframes mymove {
     from {
         width: 25px;
@@ -15,6 +16,7 @@ body {
     }
 }
 
+/* CSS for mobile view */
 #logo {
     animation-name: mymove;
     animation-duration: 5s;
@@ -32,7 +34,7 @@ header {
     align-items: center;
 }
 
-/* correct tag? */
+/* challenge portion: same color for visited links */
 nav ul li a:visited {
     color:blue;
 }
@@ -70,6 +72,7 @@ nav ul li a:visited {
     justify-content: center;
 }
 
+/* CSS for desktop view */
 @media only screen and (min-width: 900px) {
     header, .nav_links {
         display: flex;
@@ -82,19 +85,22 @@ nav ul li a:visited {
         flex-basis: 275px;
     }
 
+    /* challenge portion: sticky header */
     a + header {
         top: 0px;
         position: sticky;
     }
 }
 
-
+/* adjust to accessibility needs */
 @media screen and (prefers-reduced-motion) {
     #logo {
         animation: mymove none;
     } 
 }
 
+
+/* CSS for printing view */
 @media print {
     body {
         font-family: Arial, Helvetica;
@@ -124,6 +130,7 @@ nav ul li a:visited {
         display:none;
     }
     
+    /* challenge portion: adding thumbs up emoji to print view */
     .card li:nth-child(2)::after {
         content:"\01F44D";
     }
